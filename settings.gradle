@@ -1,0 +1,1 @@
+include ':app', ':buildSrc', ':data:model', ':data:local', ':common_test', ':services', ":data:remote", ":data:repository"

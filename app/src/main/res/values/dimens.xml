@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="weatherforecast_image_weather_width">130dp</dimen>
+    <dimen name="weatherforecast_image_weather_height">130dp</dimen>
+    <dimen name="weatherforecast_image_weather_margin_top">90dp</dimen>
+</resources>

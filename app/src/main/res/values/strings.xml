@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="weatherforecast_no_location_permission">Permission denied</string>
+    <string name="weatherforecast_no_location_permission_message">Location permission was denied, you must grant the permission to check the local weather.</string>
+    <string name="weatherforecast_min">min</string>
+    <string name="weatherforecast_max">max</string>
+    <string name="weatherforecast_temp">%1$s°C</string>
+</resources>

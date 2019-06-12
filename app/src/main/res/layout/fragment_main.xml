@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tech.weatherforecast.features.weatherforecast.WeatherForecastViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_blue_gradient">
+
+        <ImageView
+            android:id="@+id/weather_image"
+            android:layout_width="@dimen/weatherforecast_image_weather_width"
+            android:layout_height="@dimen/weatherforecast_image_weather_height"
+            app:layout_constraintBottom_toTopOf="@+id/weather_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_sunny"
+            app:weather_icon="@{viewmodel.weather.title}"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/weather_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sunny"
+            android:textColor="@color/weatherforecast_white"
+            android:textSize="24sp"
+            android:text="@{viewmodel.weather.title}"
+            app:layout_constraintBottom_toTopOf="@+id/weather_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/weather_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="clear sky"
+            android:textColor="@color/weatherforecast_white"
+            android:textSize="18sp"
+            android:text="@{viewmodel.weather.description}"
+            app:layout_constraintBottom_toTopOf="@+id/weather_temp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            />
+<!--String.format("%dC", 101)-->
+        <TextView
+            android:id="@+id/weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="18°C"
+            app:temperature="@{viewmodel.weather.temperature}"
+            android:textColor="@color/weatherforecast_white"
+            android:textSize="40sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/weather_temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12°C"
+            app:temperature="@{viewmodel.weather.temperatureMin}"
+            android:textColor="@color/weatherforecast_grey_super_light"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/weather_temp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+            android:id="@+id/weather_temp_min_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weatherforecast_min"
+            android:textColor="@color/weatherforecast_grey_super_light"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/weather_temp_min"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            />
+
+        <TextView
+            android:id="@+id/weather_temp_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="25°C"
+            android:textColor="@color/weatherforecast_grey_super_light"
+            app:temperature="@{viewmodel.weather.temperatureMax}"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/weather_temp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/weather_temp_max_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weatherforecast_max"
+            android:textColor="@color/weatherforecast_grey_super_light"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/weather_temp_max"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="6dp"
+            />
+
+
+        <TextView
+            android:id="@+id/weather_local_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="London"
+            android:textColor="@color/weatherforecast_white"
+            android:text="@{viewmodel.weather.name}"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/weather_temp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="36dp"
+            />
+
+        <TextView
+            android:id="@+id/weather_last_refreshed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="@{viewmodel.weather.lastRefreshed}"
+            tools:text="date"
+            android:textColor="@color/weatherforecast_white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="36dp"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

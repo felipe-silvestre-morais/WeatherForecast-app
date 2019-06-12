@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WeatherForecast-app.iml" filepath="$PROJECT_DIR$/WeatherForecast-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_test/common_test.iml" filepath="$PROJECT_DIR$/common_test/common_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/local/local.iml" filepath="$PROJECT_DIR$/data/local/local.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/model/model.iml" filepath="$PROJECT_DIR$/data/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/remote/remote.iml" filepath="$PROJECT_DIR$/data/remote/remote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/repository/repository.iml" filepath="$PROJECT_DIR$/data/repository/repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/services.iml" filepath="$PROJECT_DIR$/services/services.iml" />
+    </modules>
+  </component>
+</project>

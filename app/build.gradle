@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply from: '../android_commons.gradle'
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        applicationId ApplicationId.id
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation project(Modules.repository)
+    implementation project(Modules.model)
+    implementation project(Modules.remote)
+    implementation project(Modules.local)
+    implementation project(Modules.services)
+    testImplementation project(Modules.commonTest)
+
+    implementation Libraries.koin
+    implementation Libraries.koinViewModel
+    // TEST
+    androidTestImplementation TestLibraries.androidTestRunner
+    androidTestImplementation TestLibraries.junit
+    androidTestImplementation project(Modules.commonTest)
+    androidTestImplementation TestLibraries.mockkAndroid
+    androidTestImplementation TestLibraries.espresso
+    androidTestImplementation TestLibraries.espressoContrib
+    androidTestImplementation TestLibraries.koin
+    androidTestImplementation TestLibraries.archCoreTest
+    testImplementation TestLibraries.androidTestRunner
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.mockk
+    testImplementation TestLibraries.archCoreTest
+//    kaptAndroidTest TestLibraries.databinding
+
+    // ANDROID
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.constraintLayout
+    implementation AndroidLibraries.lifecycleViewModel
+    implementation AndroidLibraries.lifecycleExtensions
+    implementation AndroidLibraries.recyclerView
+    implementation AndroidLibraries.rxPermission
+    implementation AndroidLibraries.reactiveLocation
+
+    implementation Libraries.rxJava
+    implementation Libraries.rxAndroid
+}

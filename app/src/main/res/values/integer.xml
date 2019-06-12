@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="refresh_weather_service_execution_in_minutes">120</integer> <!--2 hours-->
+</resources>
