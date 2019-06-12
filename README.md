@@ -1,4 +1,7 @@
 # Weather Forecast app (multi-modules & MVVM & Data binding)
+
+![Screen 1](images/screen_1.png)
+![Screen 2](images/screen_2.png)
   
 ## Library Decisions
 
@@ -65,7 +68,7 @@ Because the view has to react every database change (new weather forecast data u
 
  
  
-
+![Architecture](images/architecture.jpg)
   
 
 ## TO DO / IMPROVE / RELEASE
