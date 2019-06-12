@@ -53,7 +53,14 @@ Because the view has to react every database change (new weather forecast data u
 * **local**: local database
 * **repository**: provide a local api to the app and contains the logic to unbundle and cache server’s response
 
+#### services:
 * **services**: Schedule worker to execute refresh task periodically to get a fresh data from server
+
+
+#### common_test:
+* **common_test**: Shared utils classes with different modules
+
+#### app:
 * **app**: features
 
  
@@ -76,7 +83,6 @@ Because the view has to react every database change (new weather forecast data u
 
 ## Other notes
 
-  
 
 Make sure your emulator has a new version of Google Play Services, because the project depends on a new Firebase’s version. To update an emulator with the latest Google play services:
 
