@@ -49,38 +49,30 @@ Because the view has to react to every database change (new weather forecast dat
 
 Android view reacts with data binding strategy, less code, less bug, readable code.
 
-```mermaid
-graph LR
-A[View] --LiveDataWeather--> B(Repository)
-B --> D(Loca data)
-B --> C(Remote data)
-E[Worker] --Refresh Weather--> B
-
-```
-
 
 ### Project divided in modules
 
---- data:
-----**model**: model classes
-----**remote**: remote data - server api
-----**local**: local database
-----**repository**: provide a local api to the app and contains the logic to unbundle and cache server’s response
+* data:
+** **model**: model classes
+** **remote**: remote data - server api
+** **local**: local database
+** **repository**: provide a local api to the app and contains the logic to unbundle and cache server’s response
 
---- **services**: Schedule worker to execute refresh task periodically to get a fresh data from server
---- **app**: features
+** **services**: Schedule worker to execute refresh task periodically to get a fresh data from server
+** **app**: features
 
  
  
 
   
 
-## TO DO / IMPROVE
+## TO DO / IMPROVE / RELEASE
 
--   Create Boot Completed Broadcast receiver to schedule the work to refresh weather.
--   No connection and error handling when server api is requested
--   Export env variables (endpoint and apikey) and create other build flavours (debug, release, automation, etc…)
--   Create UI tests with Espresso
+*   Create Boot Completed Broadcast receiver to schedule the work to refresh weather.
+*   No connection and error handling when server api is requested
+*   Export env variables (endpoint and apikey) and create other build flavours (debug, release, automation, etc…)
+*   Create UI tests with Espresso
+*   Add CI system (like Travis or Circle CI)
 
   
 
