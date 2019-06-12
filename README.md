@@ -53,13 +53,13 @@ Android view reacts with data binding strategy, less code, less bug, readable co
 ### Project divided in modules
 
 * data:
-** **model**: model classes
-** **remote**: remote data - server api
-** **local**: local database
-** **repository**: provide a local api to the app and contains the logic to unbundle and cache server’s response
+* **model**: model classes
+* **remote**: remote data - server api
+* **local**: local database
+* **repository**: provide a local api to the app and contains the logic to unbundle and cache server’s response
 
-** **services**: Schedule worker to execute refresh task periodically to get a fresh data from server
-** **app**: features
+* **services**: Schedule worker to execute refresh task periodically to get a fresh data from server
+* **app**: features
 
  
  
@@ -73,7 +73,8 @@ Android view reacts with data binding strategy, less code, less bug, readable co
 *   Export env variables (endpoint and apikey) and create other build flavours (debug, release, automation, etc…)
 *   Create UI tests with Espresso
 *   Add CI system (like Travis or Circle CI)
-
+*   Set Firebase Analytics
+*   Firebase Remote Config (for feature flags)
   
 
   
