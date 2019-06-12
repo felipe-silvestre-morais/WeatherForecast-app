@@ -2,8 +2,6 @@
   
 ## Library Decisions
 
-  
-
 *   **RxJava**: Async tasks in an easy way to apply operators over the results and enables to make use of other libraries such RxLocation & RxPermissions.
 *   **Retrofit**: most well-known used http client in Android community with RxJava support
 *   **Mockk**: I took the opportunity to learn and use mockk rather mockito, it’s a kotlin way to mock things for unit tests.
@@ -18,7 +16,7 @@
 
   
 
-## System Design Decisions:
+## System Design Decision
 
 ### **Multi-modules**
 
@@ -32,7 +30,7 @@ This approach helps us to have a **low build times**, **manage code in large tea
 
 ### MVVM
 
-Because the view has to react to every database change (new weather forecast data update), I chose MVVM design with Android Components LiveData, ViewModel and Data Binding, making it to a reactive view.
+Because the view has to react every database change (new weather forecast data update), I chose MVVM with Android Components LiveData, ViewModel and Data Binding, making it more reactive.
 
   
 
@@ -44,15 +42,12 @@ Because the view has to react to every database change (new weather forecast dat
 
 * In the main module (app), the **MainFragment** holds a instance of a ViewModel with a LiveData provided by the **repository**, which every database changes the LiveData is notified and the view reacts by updating the layout (data binding). 
 
-### * **In simples words, the View only listens to the Local Data and the Worker is responsible to request the Remote Data, this strategy keeps the flow simple and the view doesn’t need to control two different streams (remote and local database).**
-
-
-Android view reacts with data binding strategy, less code, less bug, readable code.
+* **In simples words, the View only listens to the Local Data and the Worker is responsible to request the Remote Data, this strategy keeps the flow simple and the view doesn’t need to control two different streams (remote and local database).**
 
 
 ### Project divided in modules
 
-* data:
+#### data:
 * **model**: model classes
 * **remote**: remote data - server api
 * **local**: local database
