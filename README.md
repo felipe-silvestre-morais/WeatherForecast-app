@@ -74,6 +74,7 @@ Because the view has to react every database change (new weather forecast data u
 *   No connection and error handling when server api is requested
 *   Export env variables (endpoint and apikey) and create other build flavours (debug, release, automation, etc…)
 *   Create UI tests with Espresso
+*   Configure Proguard
 *   Add CI system (like Travis or Circle CI)
 *   Set Firebase Analytics
 *   Firebase Remote Config (for feature flags)
