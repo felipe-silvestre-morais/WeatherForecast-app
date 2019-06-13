@@ -9,7 +9,7 @@ interface ServiceStarter {
     fun startService()
 }
 
-class DefaultServiceStarter(private val ctx: Context, val preferences: SharedPreferences): ServiceStarter {
+class DefaultServiceStarter(private val ctx: Context, private val preferences: SharedPreferences): ServiceStarter {
     private val prefServiceSchedule = "PREF_SERVICE_SCHEDULED"
 
     override fun startService() {
