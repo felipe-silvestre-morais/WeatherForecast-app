@@ -73,11 +73,13 @@ Because the view has to react to every database change (new weather forecast dat
 
 ## TO DO / IMPROVE / RELEASE
 
-*   Create Boot Completed Broadcast receiver to schedule the work to refresh weather.
+*   Create Boot Completed Broadcast receiver to schedule the work to refresh weather after device reboot.
 *   No connection and error handling when server api is requested
 *   Export env variables (endpoint and apikey) and create other build flavours (debug, release, automation, etc…)
 *   Create UI tests with Espresso
+*   Create styles and the app theme
 *   Configure Proguard
+*   Accessibility
 *   Add CI system (like Travis or Circle CI)
 *   Set Firebase Analytics
 *   Firebase Remote Config (for feature flags)
